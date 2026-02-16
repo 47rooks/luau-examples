@@ -1,0 +1,15 @@
+local Dog = require("./Dog")
+local Utils = require("../../Utilities/Utils")
+
+d = Dog.new('Fido')
+Utils.dumpTable("d", d, 0)
+print('dogs name d.name=' .. d.name)
+print('dogs name Dog.getAnimalName()=' .. Dog.getAnimalName(d))
+print('dogs name d:getAnimalName()=' .. d:getAnimalName())
+print(d)
+print('dogs metatable ')
+print(getmetatable(d))
+d.mt =nil
+print(getmetatable(d))
+print(Dog.getName(d))
+print(d:getName())
